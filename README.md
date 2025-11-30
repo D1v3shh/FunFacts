@@ -88,10 +88,10 @@ Below is the high-level architecture of the **Cloud Fun Facts Generator**:
                                              └────────────┬───────────┘
                                                           │ 5. Return witty fact
                                                           ▼
-                         ┌────────────────────────┐
-                         │  AWS AMPLIFY FRONTEND  │
-                         │ Displays final fact    │
-                         └────────────────────────┘
+                                             ┌────────────────────────┐
+                                             │  AWS AMPLIFY FRONTEND  │
+                                             │ Displays final fact    │
+                                             └────────────────────────┘
 
 
 
