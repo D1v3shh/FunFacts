@@ -72,7 +72,7 @@ Below is the high-level architecture of the **Cloud Fun Facts Generator**:
                          │ Backend Logic          │
                          │ - Fetch random fact    │
                          │ - Enhance using AI     │
-                         └───────┬────────┬──────┘
+                         └───────┬────────┬───────┘
                                  │        │
        3. Query random fact      │        │ 4. Send fact for AI enhancement
                                  │        ▼
