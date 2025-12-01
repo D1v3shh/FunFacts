@@ -120,6 +120,13 @@ Follow these steps to build your own Cloud Fun Facts Generator 👇
 - Test your app — click the button and enjoy the fun facts!
 
 ---
+## 📸 Demo
+
+Example:
+
+[FunFacts](https://main.d3tj576yja86q4.amplifyapp.com/)
+
+---
 
 ## ⏱️ Estimated Time & Cost
 
