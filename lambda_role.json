@@ -1,0 +1,36 @@
+{
+  "_comment_": "================================================================ Least-privilege IAM policy for the Lambda Execution Role used in the AI Fact Generator workshop. Attach this policy to the IAM Role assigned to your Lambda function (NOT to a user). Replace every <<PLACEHOLDER>> before use. JSON does not support real comments, so this _comment_ key is for documentation only - remove it before attaching the policy in AWS. ================================================================",
+
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowBedrockModelInvocation",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock:InvokeModel"
+      ],
+      "Resource": "arn:aws:bedrock:<<AWS_REGION>>::foundation-model/<<BEDROCK_MODEL_ID>>"
+    },
+    {
+      "Sid": "AllowDynamoDBWriteAndRead",
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:PutItem",
+        "dynamodb:GetItem",
+        "dynamodb:Query",
+        "dynamodb:Scan"
+      ],
+      "Resource": "arn:aws:dynamodb:<<AWS_REGION>>:<<AWS_ACCOUNT_ID>>:table/<<DYNAMODB_TABLE_NAME>>"
+    },
+    {
+      "Sid": "AllowCloudWatchLogging",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:<<AWS_REGION>>:<<AWS_ACCOUNT_ID>>:log-group:/aws/lambda/<<LAMBDA_FUNCTION_NAME>>:*"
+    }
+  ]
+}
