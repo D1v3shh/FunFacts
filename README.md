@@ -136,13 +136,7 @@ Follow these steps to build your own Cloud Fun Facts Generator 👇
    }
    ```
 
-### 2️⃣ Enable Amazon Bedrock Model Access
-
-1. Open the [Amazon Bedrock Console](https://console.aws.amazon.com/bedrock).
-2. Navigate to **Model access** and request access to **Claude 3.5 Sonnet** (`anthropic.claude-3-5-sonnet-20240620-v1:0`).
-3. Wait for access to be granted (usually instant for supported regions).
-
-### 3️⃣ Create the Lambda Function
+### 2️⃣ Create the Lambda Function
 
 1. Open the [Lambda Console](https://console.aws.amazon.com/lambda).
 2. Create a new function with **Python 3.12** runtime.
@@ -157,7 +151,7 @@ Follow these steps to build your own Cloud Fun Facts Generator 👇
    > - `<<DYNAMODB_TABLE_NAME>>` — `CloudFacts`
    > - `<<LAMBDA_FUNCTION_NAME>>` — your Lambda function's name
 
-### 4️⃣ Set Up API Gateway
+### 3️⃣ Set Up API Gateway
 
 1. Open the [API Gateway Console](https://console.aws.amazon.com/apigateway).
 2. Create a new **REST API**.
@@ -166,7 +160,7 @@ Follow these steps to build your own Cloud Fun Facts Generator 👇
 5. Deploy the API to a stage (e.g., `prod` or `funfact`).
 6. Copy the **Invoke URL** — you'll need it for the frontend.
 
-### 5️⃣ Deploy the Frontend
+### 4️⃣ Deploy the Frontend
 
 1. Open **`index.html`** and replace the `API_URL` value with your API Gateway invoke URL:
    ```javascript
@@ -176,7 +170,7 @@ Follow these steps to build your own Cloud Fun Facts Generator 👇
 3. Open the [AWS Amplify Console](https://console.aws.amazon.com/amplify).
 4. Connect your GitHub repo and deploy — Amplify will host `index.html` automatically.
 
-### 6️⃣ Test It!
+### 5️⃣ Test It!
 
 Open your Amplify app URL and click **"Generate Fun Fact"** — you should see a witty, AI-enhanced cloud fact! 🎉
 

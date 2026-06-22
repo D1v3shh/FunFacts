@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -111,15 +112,18 @@
             .container {
                 padding: 30px 20px;
             }
+
             .title {
                 font-size: 2rem;
             }
+
             .fact-text {
                 font-size: 1.1rem;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1 class="title">☁️ Cloud Fun Facts</h1>
@@ -140,45 +144,46 @@
 
     <script>
         // 👇 REPLACE THIS WITH YOUR ACTUAL API ENDPOINT
-        const API_URL = ' https://ym5bas7ske.execute-api.us-east-1.amazonaws.com/funfact';
+        const API_URL = 'https://3luc1p75t1.execute-api.us-east-1.amazonaws.com/FunFacts/';
 
         async function getFact() {
             const btn = document.getElementById('generateBtn');
             const factText = document.getElementById('factText');
-            
+
             // Show loading
             btn.disabled = true;
             btn.textContent = 'Loading...';
             factText.textContent = 'Getting your fact...';
             factText.className = 'fact-text loading';
-            
+
             try {
                 // Call your API
                 const response = await fetch(API_URL);
                 const data = await response.json();
-                
+
                 // Show the fact
                 factText.textContent = data.fact;
                 factText.className = 'fact-text';
-                
+
             } catch (error) {
                 // Show error
                 factText.innerHTML = '<div class="error">Could not fetch fact. Check your API endpoint!</div>';
                 console.error('Error:', error);
             }
-            
+
             // Reset button
             btn.disabled = false;
             btn.textContent = 'Generate Another Fact';
         }
 
         // Check if API is configured
-        window.onload = function() {
+        window.onload = function () {
             if (API_URL.includes('YOUR-API-ID')) {
-                document.getElementById('factText').innerHTML = 
+                document.getElementById('factText').innerHTML =
                     '<div class="error">Please update API_URL in the script with your actual API Gateway endpoint</div>';
             }
         };
     </script>
 </body>
+
 </html>
