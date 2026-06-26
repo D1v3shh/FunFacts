@@ -179,7 +179,7 @@ Open your Amplify app URL and click **"Generate Fun Fact"** — you should see a
 
 ## 📸 Demo
 
-🔗 **Live Demo:** [Cloud Fun Facts Generator](https://main.d3tj576yja86q4.amplifyapp.com/)
+🔗 **Live Demo:** [Cloud Fun Facts Generator](https://main.d3fy68n2ccu6fw.amplifyapp.com/)
 
 ---
 
